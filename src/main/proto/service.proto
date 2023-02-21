@@ -1,0 +1,51 @@
+syntax = "proto3";
+package com.subscriptionmanager;
+option java_multiple_files = true;
+option  java_package = "com.subscriptionserver.proto";
+import "message.proto";
+
+service NewsletterService{
+  rpc createNewsletter(CreateNewsletterRequest) returns(NewsletterDetails){};
+  rpc ListNewsletter(ListNewsletterRequest) returns(ListNewsletterResponse){};
+}
+
+service SubscriptionService{
+  rpc createSubscription(CreateSubscriptionRequest) returns(Subscription){};
+  rpc listSubscription(ListSubscriptionRequest) returns(ListSubscriptionResponse){};
+  rpc deleteSubscription(DeleteSubscriptionRequest) returns(DeleteSubscriptionResponse){};
+  rpc renewSubscription(RenewSubscriptionRequest) returns(RenewSubscriptionResponse){};
+}
+
+message CreateNewsletterRequest{
+  NewsletterDetails newsletter = 1;
+}
+
+message ListNewsletterRequest{
+
+}
+
+message ListNewsletterResponse{
+  repeated NewsletterDetails newsletter = 1;
+}
+
+message CreateSubscriptionRequest{
+  Subscription subscription = 1;
+}
+message ListSubscriptionRequest{
+
+}
+message ListSubscriptionResponse{
+  repeated Subscription subscription = 1;
+}
+message DeleteSubscriptionRequest{
+  string subscription_id = 1;
+}
+message DeleteSubscriptionResponse{
+
+}
+message RenewSubscriptionRequest{
+  string subscription_id = 1;
+}
+message RenewSubscriptionResponse{
+  Subscription subscription = 1;
+}

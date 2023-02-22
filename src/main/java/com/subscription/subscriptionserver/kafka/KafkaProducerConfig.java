@@ -1,6 +1,6 @@
 package com.subscription.subscriptionserver.kafka;
 
-import com.subscription.subscriptionserver.model.MailRequestKafkaMessage;
+import com.subscriptionserver.proto.KafkaMessage;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -13,9 +13,10 @@ public class KafkaProducerConfig {
   @Value("${spring.kafka.mailing.topic.name}")
   private String topic;
   @Autowired
-  private KafkaTemplate<String, MailRequestKafkaMessage> kafkaTemplate;
+  private KafkaTemplate<String, KafkaMessage> kafkaTemplate;
 
-  public void send(final MailRequestKafkaMessage mailRequestKafkaMessage) {
+  public void send(final KafkaMessage mailRequestKafkaMessage) {
+
     log.info("inside send");
     kafkaTemplate.send(topic, mailRequestKafkaMessage);
     log.info("completed send");

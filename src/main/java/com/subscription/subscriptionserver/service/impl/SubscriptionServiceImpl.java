@@ -5,7 +5,6 @@ import com.subscription.subscriptionserver.entity.Newsletter;
 import com.subscription.subscriptionserver.entity.Subscription;
 import com.subscription.subscriptionserver.exceptions.ResourceException;
 import com.subscription.subscriptionserver.kafka.KafkaProducerConfig;
-import com.subscription.subscriptionserver.model.MailRequestKafkaMessage;
 import com.subscription.subscriptionserver.repository.NewsletterRepo;
 import com.subscription.subscriptionserver.repository.SubscriptionRepo;
 import com.subscription.subscriptionserver.service.SubscriptionService;
@@ -13,6 +12,7 @@ import com.subscription.subscriptionserver.util.GrpcUtils;
 import com.subscriptionserver.proto.CreateSubscriptionRequest;
 import com.subscriptionserver.proto.DeleteSubscriptionRequest;
 import com.subscriptionserver.proto.DeleteSubscriptionResponse;
+import com.subscriptionserver.proto.KafkaMessage;
 import com.subscriptionserver.proto.ListSubscriptionRequest;
 import com.subscriptionserver.proto.ListSubscriptionResponse;
 import com.subscriptionserver.proto.RenewSubscriptionRequest;
@@ -67,8 +67,8 @@ public class SubscriptionServiceImpl implements SubscriptionService {
     newsletter.getSubscriptions().add(subscription);
     newsletterRepo.save(newsletter);
     subscriptionRepo.save(subscription);
-    kafkaProducer.send(MailRequestKafkaMessage.builder()
-        .receiver(username).content(subscription.getId()).build());
+    kafkaProducer.send(KafkaMessage.newBuilder().setContent(subscription.getId())
+        .setReceiver(username).build());
     return com.subscriptionserver.proto.Subscription.newBuilder()
         .setId(subscription.getId())
         .setUsername(subscription.getUsername())
@@ -88,8 +88,8 @@ public class SubscriptionServiceImpl implements SubscriptionService {
             .setNewsletterId(s.getNewsletter().getId())
             .setValidityDate(s.getValidity().toString()).build()
         ).toList();
-    kafkaProducer.send(MailRequestKafkaMessage.builder()
-        .receiver(username).content("dummyMesage").build());
+//    kafkaProducer.send(KafkaMessage.newBuilder().setContent("DummyMessage")
+//        .setReceiver("satyam").build());
     return ListSubscriptionResponse.newBuilder()
         .addAllSubscription(subscriptionsProto).build();
   }

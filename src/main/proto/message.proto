@@ -16,3 +16,8 @@ message Subscription{
   string username = 3;
   string validityDate = 4;
 }
+message KafkaMessage{
+  string receiver = 1;
+  string content = 2;
+
+}

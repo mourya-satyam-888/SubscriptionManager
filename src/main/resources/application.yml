@@ -15,16 +15,11 @@ spring:
       auto-offset-reset: earliest
       bootstrap-servers: localhost:9092
       group-id: subscriptionmanager
-      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      value-deserializer: com.subscription.subscriptionserver.kafka.deserializer.KafkaMessageDeserializer
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      properties:
-        spring:
-          json:
-            trusted:
-              packages: '*'
     producer:
       bootstrap-servers: localhost:9092
-      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      value-serializer: com.subscription.subscriptionserver.kafka.serializer.KafkaMessageSerializer
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
     mailing:
       topic:

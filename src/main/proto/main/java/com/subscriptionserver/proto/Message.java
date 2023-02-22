@@ -24,6 +24,11 @@ public final class Message {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_subscriptionmanager_Subscription_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_subscriptionmanager_KafkaMessage_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_subscriptionmanager_KafkaMessage_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -38,8 +43,9 @@ public final class Message {
       "le\030\002 \001(\t\022\r\n\005price\030\003 \001(\005\022\020\n\010validity\030\004 \001(" +
       "\005\022\r\n\005genre\030\005 \001(\t\"X\n\014Subscription\022\n\n\002id\030\001" +
       " \001(\t\022\024\n\014newsletterId\030\002 \001(\t\022\020\n\010username\030\003" +
-      " \001(\t\022\024\n\014validityDate\030\004 \001(\tB \n\034com.subscr" +
-      "iptionserver.protoP\001b\006proto3"
+      " \001(\t\022\024\n\014validityDate\030\004 \001(\t\"1\n\014KafkaMessa" +
+      "ge\022\020\n\010receiver\030\001 \001(\t\022\017\n\007content\030\002 \001(\tB \n" +
+      "\034com.subscriptionserver.protoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -57,6 +63,12 @@ public final class Message {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_subscriptionmanager_Subscription_descriptor,
         new java.lang.String[] { "Id", "NewsletterId", "Username", "ValidityDate", });
+    internal_static_com_subscriptionmanager_KafkaMessage_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_com_subscriptionmanager_KafkaMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_subscriptionmanager_KafkaMessage_descriptor,
+        new java.lang.String[] { "Receiver", "Content", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

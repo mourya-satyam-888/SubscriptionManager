@@ -4,6 +4,8 @@ import com.subscription.subscriptionserver.constants.ExceptionMessageConstants;
 import com.subscription.subscriptionserver.entity.Newsletter;
 import com.subscription.subscriptionserver.entity.Subscription;
 import com.subscription.subscriptionserver.exceptions.ResourceException;
+import com.subscription.subscriptionserver.kafka.KafkaProducerConfig;
+import com.subscription.subscriptionserver.model.MailRequestKafkaMessage;
 import com.subscription.subscriptionserver.repository.NewsletterRepo;
 import com.subscription.subscriptionserver.repository.SubscriptionRepo;
 import com.subscription.subscriptionserver.service.SubscriptionService;
@@ -44,6 +46,8 @@ public class SubscriptionServiceImpl implements SubscriptionService {
    */
   @Autowired
   private NewsletterRepo newsletterRepo;
+  @Autowired
+  private KafkaProducerConfig kafkaProducer;
 
   @Override
   public com.subscriptionserver.proto.Subscription createSubscription(
@@ -63,6 +67,8 @@ public class SubscriptionServiceImpl implements SubscriptionService {
     newsletter.getSubscriptions().add(subscription);
     newsletterRepo.save(newsletter);
     subscriptionRepo.save(subscription);
+    kafkaProducer.send(MailRequestKafkaMessage.builder()
+        .receiver(username).content(subscription.getId()).build());
     return com.subscriptionserver.proto.Subscription.newBuilder()
         .setId(subscription.getId())
         .setUsername(subscription.getUsername())
@@ -82,6 +88,8 @@ public class SubscriptionServiceImpl implements SubscriptionService {
             .setNewsletterId(s.getNewsletter().getId())
             .setValidityDate(s.getValidity().toString()).build()
         ).toList();
+    kafkaProducer.send(MailRequestKafkaMessage.builder()
+        .receiver(username).content("dummyMesage").build());
     return ListSubscriptionResponse.newBuilder()
         .addAllSubscription(subscriptionsProto).build();
   }

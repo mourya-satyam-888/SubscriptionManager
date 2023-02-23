@@ -8,11 +8,19 @@ public interface SubscriptionOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   *id of subscription
+   * </pre>
+   *
    * <code>string id = 1;</code>
    * @return The id.
    */
   java.lang.String getId();
   /**
+   * <pre>
+   *id of subscription
+   * </pre>
+   *
    * <code>string id = 1;</code>
    * @return The bytes for id.
    */
@@ -20,23 +28,39 @@ public interface SubscriptionOrBuilder extends
       getIdBytes();
 
   /**
-   * <code>string newsletterId = 2;</code>
+   * <pre>
+   *newsletter id for which subscription is created
+   * </pre>
+   *
+   * <code>string newsletter_id = 2;</code>
    * @return The newsletterId.
    */
   java.lang.String getNewsletterId();
   /**
-   * <code>string newsletterId = 2;</code>
+   * <pre>
+   *newsletter id for which subscription is created
+   * </pre>
+   *
+   * <code>string newsletter_id = 2;</code>
    * @return The bytes for newsletterId.
    */
   com.google.protobuf.ByteString
       getNewsletterIdBytes();
 
   /**
+   * <pre>
+   *username of subscriber
+   * </pre>
+   *
    * <code>string username = 3;</code>
    * @return The username.
    */
   java.lang.String getUsername();
   /**
+   * <pre>
+   *username of subscriber
+   * </pre>
+   *
    * <code>string username = 3;</code>
    * @return The bytes for username.
    */
@@ -44,12 +68,20 @@ public interface SubscriptionOrBuilder extends
       getUsernameBytes();
 
   /**
-   * <code>string validityDate = 4;</code>
+   * <pre>
+   *validity of subscription
+   * </pre>
+   *
+   * <code>string validity_date = 4;</code>
    * @return The validityDate.
    */
   java.lang.String getValidityDate();
   /**
-   * <code>string validityDate = 4;</code>
+   * <pre>
+   *validity of subscription
+   * </pre>
+   *
+   * <code>string validity_date = 4;</code>
    * @return The bytes for validityDate.
    */
   com.google.protobuf.ByteString

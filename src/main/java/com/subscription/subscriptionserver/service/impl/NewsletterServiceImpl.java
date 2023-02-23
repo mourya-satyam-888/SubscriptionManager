@@ -1,12 +1,11 @@
 package com.subscription.subscriptionserver.service.impl;
 
 import com.subscription.subscriptionserver.entity.Newsletter;
-import com.subscription.subscriptionserver.repository.NewsletterRepo;
+import com.subscription.subscriptionserver.service.NewsletterRepoService;
 import com.subscription.subscriptionserver.service.NewsletterService;
 import com.subscriptionserver.proto.CreateNewsletterRequest;
 import com.subscriptionserver.proto.ListNewsletterResponse;
 import com.subscriptionserver.proto.NewsletterDetails;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,18 +20,18 @@ public class NewsletterServiceImpl implements NewsletterService {
    * The Newsletter repo.
    */
   @Autowired
-  private NewsletterRepo newsletterRepo;
+  private NewsletterRepoService newsletterRepoService;
 
   @Override
   public NewsletterDetails createNewsletter(CreateNewsletterRequest request) {
     Newsletter newsletter = newsletterDetailsToNewsletter(request.getNewsletter());
-    newsletterRepo.save(newsletter);
+    newsletterRepoService.save(newsletter);
     return newsletterToNewsletterDetails(newsletter);
   }
 
   @Override
   public ListNewsletterResponse listNewsletter() {
-    List<Newsletter> newsletters = newsletterRepo.findAll();
+    List<Newsletter> newsletters = newsletterRepoService.findAll();
     List<NewsletterDetails> newsletterDetailsList = newsletters.stream()
         .map(this::newsletterToNewsletterDetails).collect(Collectors.toList());
     return ListNewsletterResponse.newBuilder().addAllNewsletter(newsletterDetailsList).build();

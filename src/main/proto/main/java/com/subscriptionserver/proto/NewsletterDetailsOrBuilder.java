@@ -8,11 +8,19 @@ public interface NewsletterDetailsOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   *id of newsletter
+   * </pre>
+   *
    * <code>string id = 1;</code>
    * @return The id.
    */
   java.lang.String getId();
   /**
+   * <pre>
+   *id of newsletter
+   * </pre>
+   *
    * <code>string id = 1;</code>
    * @return The bytes for id.
    */
@@ -20,11 +28,19 @@ public interface NewsletterDetailsOrBuilder extends
       getIdBytes();
 
   /**
+   * <pre>
+   *title of newsletter
+   * </pre>
+   *
    * <code>string title = 2;</code>
    * @return The title.
    */
   java.lang.String getTitle();
   /**
+   * <pre>
+   *title of newsletter
+   * </pre>
+   *
    * <code>string title = 2;</code>
    * @return The bytes for title.
    */
@@ -32,23 +48,39 @@ public interface NewsletterDetailsOrBuilder extends
       getTitleBytes();
 
   /**
+   * <pre>
+   *price of newsletter
+   * </pre>
+   *
    * <code>int32 price = 3;</code>
    * @return The price.
    */
   int getPrice();
 
   /**
+   * <pre>
+   *validity of newsletter
+   * </pre>
+   *
    * <code>int32 validity = 4;</code>
    * @return The validity.
    */
   int getValidity();
 
   /**
+   * <pre>
+   *genre of newsletter
+   * </pre>
+   *
    * <code>string genre = 5;</code>
    * @return The genre.
    */
   java.lang.String getGenre();
   /**
+   * <pre>
+   *genre of newsletter
+   * </pre>
+   *
    * <code>string genre = 5;</code>
    * @return The bytes for genre.
    */

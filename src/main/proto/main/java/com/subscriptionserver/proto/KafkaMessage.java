@@ -4,6 +4,10 @@
 package com.subscriptionserver.proto;
 
 /**
+ * <pre>
+ *Kafka Message
+ * </pre>
+ *
  * Protobuf type {@code com.subscriptionmanager.KafkaMessage}
  */
 public final class KafkaMessage extends
@@ -48,6 +52,10 @@ private static final long serialVersionUID = 0L;
   public static final int RECEIVER_FIELD_NUMBER = 1;
   private volatile java.lang.Object receiver_;
   /**
+   * <pre>
+   *receiver mail
+   * </pre>
+   *
    * <code>string receiver = 1;</code>
    * @return The receiver.
    */
@@ -65,6 +73,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   *receiver mail
+   * </pre>
+   *
    * <code>string receiver = 1;</code>
    * @return The bytes for receiver.
    */
@@ -86,6 +98,10 @@ private static final long serialVersionUID = 0L;
   public static final int CONTENT_FIELD_NUMBER = 2;
   private volatile java.lang.Object content_;
   /**
+   * <pre>
+   *content of mail
+   * </pre>
+   *
    * <code>string content = 2;</code>
    * @return The content.
    */
@@ -103,6 +119,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   *content of mail
+   * </pre>
+   *
    * <code>string content = 2;</code>
    * @return The bytes for content.
    */
@@ -286,6 +306,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   *Kafka Message
+   * </pre>
+   *
    * Protobuf type {@code com.subscriptionmanager.KafkaMessage}
    */
   public static final class Builder extends
@@ -460,6 +484,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object receiver_ = "";
     /**
+     * <pre>
+     *receiver mail
+     * </pre>
+     *
      * <code>string receiver = 1;</code>
      * @return The receiver.
      */
@@ -476,6 +504,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     *receiver mail
+     * </pre>
+     *
      * <code>string receiver = 1;</code>
      * @return The bytes for receiver.
      */
@@ -493,6 +525,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     *receiver mail
+     * </pre>
+     *
      * <code>string receiver = 1;</code>
      * @param value The receiver to set.
      * @return This builder for chaining.
@@ -508,6 +544,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     *receiver mail
+     * </pre>
+     *
      * <code>string receiver = 1;</code>
      * @return This builder for chaining.
      */
@@ -518,6 +558,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     *receiver mail
+     * </pre>
+     *
      * <code>string receiver = 1;</code>
      * @param value The bytes for receiver to set.
      * @return This builder for chaining.
@@ -536,6 +580,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object content_ = "";
     /**
+     * <pre>
+     *content of mail
+     * </pre>
+     *
      * <code>string content = 2;</code>
      * @return The content.
      */
@@ -552,6 +600,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     *content of mail
+     * </pre>
+     *
      * <code>string content = 2;</code>
      * @return The bytes for content.
      */
@@ -569,6 +621,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     *content of mail
+     * </pre>
+     *
      * <code>string content = 2;</code>
      * @param value The content to set.
      * @return This builder for chaining.
@@ -584,6 +640,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     *content of mail
+     * </pre>
+     *
      * <code>string content = 2;</code>
      * @return This builder for chaining.
      */
@@ -594,6 +654,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     *content of mail
+     * </pre>
+     *
      * <code>string content = 2;</code>
      * @param value The bytes for content to set.
      * @return This builder for chaining.

@@ -4,6 +4,10 @@
 package com.subscriptionserver.proto;
 
 /**
+ * <pre>
+ *Subscription Message
+ * </pre>
+ *
  * Protobuf type {@code com.subscriptionmanager.Subscription}
  */
 public final class Subscription extends
@@ -50,6 +54,10 @@ private static final long serialVersionUID = 0L;
   public static final int ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object id_;
   /**
+   * <pre>
+   *id of subscription
+   * </pre>
+   *
    * <code>string id = 1;</code>
    * @return The id.
    */
@@ -67,6 +75,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   *id of subscription
+   * </pre>
+   *
    * <code>string id = 1;</code>
    * @return The bytes for id.
    */
@@ -85,10 +97,14 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int NEWSLETTERID_FIELD_NUMBER = 2;
+  public static final int NEWSLETTER_ID_FIELD_NUMBER = 2;
   private volatile java.lang.Object newsletterId_;
   /**
-   * <code>string newsletterId = 2;</code>
+   * <pre>
+   *newsletter id for which subscription is created
+   * </pre>
+   *
+   * <code>string newsletter_id = 2;</code>
    * @return The newsletterId.
    */
   @java.lang.Override
@@ -105,7 +121,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string newsletterId = 2;</code>
+   * <pre>
+   *newsletter id for which subscription is created
+   * </pre>
+   *
+   * <code>string newsletter_id = 2;</code>
    * @return The bytes for newsletterId.
    */
   @java.lang.Override
@@ -126,6 +146,10 @@ private static final long serialVersionUID = 0L;
   public static final int USERNAME_FIELD_NUMBER = 3;
   private volatile java.lang.Object username_;
   /**
+   * <pre>
+   *username of subscriber
+   * </pre>
+   *
    * <code>string username = 3;</code>
    * @return The username.
    */
@@ -143,6 +167,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   *username of subscriber
+   * </pre>
+   *
    * <code>string username = 3;</code>
    * @return The bytes for username.
    */
@@ -161,10 +189,14 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int VALIDITYDATE_FIELD_NUMBER = 4;
+  public static final int VALIDITY_DATE_FIELD_NUMBER = 4;
   private volatile java.lang.Object validityDate_;
   /**
-   * <code>string validityDate = 4;</code>
+   * <pre>
+   *validity of subscription
+   * </pre>
+   *
+   * <code>string validity_date = 4;</code>
    * @return The validityDate.
    */
   @java.lang.Override
@@ -181,7 +213,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string validityDate = 4;</code>
+   * <pre>
+   *validity of subscription
+   * </pre>
+   *
+   * <code>string validity_date = 4;</code>
    * @return The bytes for validityDate.
    */
   @java.lang.Override
@@ -282,11 +318,11 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ID_FIELD_NUMBER;
     hash = (53 * hash) + getId().hashCode();
-    hash = (37 * hash) + NEWSLETTERID_FIELD_NUMBER;
+    hash = (37 * hash) + NEWSLETTER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getNewsletterId().hashCode();
     hash = (37 * hash) + USERNAME_FIELD_NUMBER;
     hash = (53 * hash) + getUsername().hashCode();
-    hash = (37 * hash) + VALIDITYDATE_FIELD_NUMBER;
+    hash = (37 * hash) + VALIDITY_DATE_FIELD_NUMBER;
     hash = (53 * hash) + getValidityDate().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -384,6 +420,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   *Subscription Message
+   * </pre>
+   *
    * Protobuf type {@code com.subscriptionmanager.Subscription}
    */
   public static final class Builder extends
@@ -582,6 +622,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object id_ = "";
     /**
+     * <pre>
+     *id of subscription
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -598,6 +642,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     *id of subscription
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -615,6 +663,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     *id of subscription
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @param value The id to set.
      * @return This builder for chaining.
@@ -630,6 +682,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     *id of subscription
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return This builder for chaining.
      */
@@ -640,6 +696,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     *id of subscription
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @param value The bytes for id to set.
      * @return This builder for chaining.
@@ -658,7 +718,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object newsletterId_ = "";
     /**
-     * <code>string newsletterId = 2;</code>
+     * <pre>
+     *newsletter id for which subscription is created
+     * </pre>
+     *
+     * <code>string newsletter_id = 2;</code>
      * @return The newsletterId.
      */
     public java.lang.String getNewsletterId() {
@@ -674,7 +738,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string newsletterId = 2;</code>
+     * <pre>
+     *newsletter id for which subscription is created
+     * </pre>
+     *
+     * <code>string newsletter_id = 2;</code>
      * @return The bytes for newsletterId.
      */
     public com.google.protobuf.ByteString
@@ -691,7 +759,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string newsletterId = 2;</code>
+     * <pre>
+     *newsletter id for which subscription is created
+     * </pre>
+     *
+     * <code>string newsletter_id = 2;</code>
      * @param value The newsletterId to set.
      * @return This builder for chaining.
      */
@@ -706,7 +778,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string newsletterId = 2;</code>
+     * <pre>
+     *newsletter id for which subscription is created
+     * </pre>
+     *
+     * <code>string newsletter_id = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearNewsletterId() {
@@ -716,7 +792,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string newsletterId = 2;</code>
+     * <pre>
+     *newsletter id for which subscription is created
+     * </pre>
+     *
+     * <code>string newsletter_id = 2;</code>
      * @param value The bytes for newsletterId to set.
      * @return This builder for chaining.
      */
@@ -734,6 +814,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object username_ = "";
     /**
+     * <pre>
+     *username of subscriber
+     * </pre>
+     *
      * <code>string username = 3;</code>
      * @return The username.
      */
@@ -750,6 +834,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     *username of subscriber
+     * </pre>
+     *
      * <code>string username = 3;</code>
      * @return The bytes for username.
      */
@@ -767,6 +855,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     *username of subscriber
+     * </pre>
+     *
      * <code>string username = 3;</code>
      * @param value The username to set.
      * @return This builder for chaining.
@@ -782,6 +874,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     *username of subscriber
+     * </pre>
+     *
      * <code>string username = 3;</code>
      * @return This builder for chaining.
      */
@@ -792,6 +888,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     *username of subscriber
+     * </pre>
+     *
      * <code>string username = 3;</code>
      * @param value The bytes for username to set.
      * @return This builder for chaining.
@@ -810,7 +910,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object validityDate_ = "";
     /**
-     * <code>string validityDate = 4;</code>
+     * <pre>
+     *validity of subscription
+     * </pre>
+     *
+     * <code>string validity_date = 4;</code>
      * @return The validityDate.
      */
     public java.lang.String getValidityDate() {
@@ -826,7 +930,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string validityDate = 4;</code>
+     * <pre>
+     *validity of subscription
+     * </pre>
+     *
+     * <code>string validity_date = 4;</code>
      * @return The bytes for validityDate.
      */
     public com.google.protobuf.ByteString
@@ -843,7 +951,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string validityDate = 4;</code>
+     * <pre>
+     *validity of subscription
+     * </pre>
+     *
+     * <code>string validity_date = 4;</code>
      * @param value The validityDate to set.
      * @return This builder for chaining.
      */
@@ -858,7 +970,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string validityDate = 4;</code>
+     * <pre>
+     *validity of subscription
+     * </pre>
+     *
+     * <code>string validity_date = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearValidityDate() {
@@ -868,7 +984,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string validityDate = 4;</code>
+     * <pre>
+     *validity of subscription
+     * </pre>
+     *
+     * <code>string validity_date = 4;</code>
      * @param value The bytes for validityDate to set.
      * @return This builder for chaining.
      */

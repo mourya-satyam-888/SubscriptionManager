@@ -4,6 +4,10 @@
 package com.subscriptionserver.proto;
 
 /**
+ * <pre>
+ *Newsletter Details message
+ * </pre>
+ *
  * Protobuf type {@code com.subscriptionmanager.NewsletterDetails}
  */
 public final class NewsletterDetails extends
@@ -49,6 +53,10 @@ private static final long serialVersionUID = 0L;
   public static final int ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object id_;
   /**
+   * <pre>
+   *id of newsletter
+   * </pre>
+   *
    * <code>string id = 1;</code>
    * @return The id.
    */
@@ -66,6 +74,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   *id of newsletter
+   * </pre>
+   *
    * <code>string id = 1;</code>
    * @return The bytes for id.
    */
@@ -87,6 +99,10 @@ private static final long serialVersionUID = 0L;
   public static final int TITLE_FIELD_NUMBER = 2;
   private volatile java.lang.Object title_;
   /**
+   * <pre>
+   *title of newsletter
+   * </pre>
+   *
    * <code>string title = 2;</code>
    * @return The title.
    */
@@ -104,6 +120,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   *title of newsletter
+   * </pre>
+   *
    * <code>string title = 2;</code>
    * @return The bytes for title.
    */
@@ -125,6 +145,10 @@ private static final long serialVersionUID = 0L;
   public static final int PRICE_FIELD_NUMBER = 3;
   private int price_;
   /**
+   * <pre>
+   *price of newsletter
+   * </pre>
+   *
    * <code>int32 price = 3;</code>
    * @return The price.
    */
@@ -136,6 +160,10 @@ private static final long serialVersionUID = 0L;
   public static final int VALIDITY_FIELD_NUMBER = 4;
   private int validity_;
   /**
+   * <pre>
+   *validity of newsletter
+   * </pre>
+   *
    * <code>int32 validity = 4;</code>
    * @return The validity.
    */
@@ -147,6 +175,10 @@ private static final long serialVersionUID = 0L;
   public static final int GENRE_FIELD_NUMBER = 5;
   private volatile java.lang.Object genre_;
   /**
+   * <pre>
+   *genre of newsletter
+   * </pre>
+   *
    * <code>string genre = 5;</code>
    * @return The genre.
    */
@@ -164,6 +196,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   *genre of newsletter
+   * </pre>
+   *
    * <code>string genre = 5;</code>
    * @return The bytes for genre.
    */
@@ -379,6 +415,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   *Newsletter Details message
+   * </pre>
+   *
    * Protobuf type {@code com.subscriptionmanager.NewsletterDetails}
    */
   public static final class Builder extends
@@ -587,6 +627,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object id_ = "";
     /**
+     * <pre>
+     *id of newsletter
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -603,6 +647,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     *id of newsletter
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -620,6 +668,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     *id of newsletter
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @param value The id to set.
      * @return This builder for chaining.
@@ -635,6 +687,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     *id of newsletter
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return This builder for chaining.
      */
@@ -645,6 +701,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     *id of newsletter
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @param value The bytes for id to set.
      * @return This builder for chaining.
@@ -663,6 +723,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object title_ = "";
     /**
+     * <pre>
+     *title of newsletter
+     * </pre>
+     *
      * <code>string title = 2;</code>
      * @return The title.
      */
@@ -679,6 +743,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     *title of newsletter
+     * </pre>
+     *
      * <code>string title = 2;</code>
      * @return The bytes for title.
      */
@@ -696,6 +764,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     *title of newsletter
+     * </pre>
+     *
      * <code>string title = 2;</code>
      * @param value The title to set.
      * @return This builder for chaining.
@@ -711,6 +783,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     *title of newsletter
+     * </pre>
+     *
      * <code>string title = 2;</code>
      * @return This builder for chaining.
      */
@@ -721,6 +797,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     *title of newsletter
+     * </pre>
+     *
      * <code>string title = 2;</code>
      * @param value The bytes for title to set.
      * @return This builder for chaining.
@@ -739,6 +819,10 @@ private static final long serialVersionUID = 0L;
 
     private int price_ ;
     /**
+     * <pre>
+     *price of newsletter
+     * </pre>
+     *
      * <code>int32 price = 3;</code>
      * @return The price.
      */
@@ -747,6 +831,10 @@ private static final long serialVersionUID = 0L;
       return price_;
     }
     /**
+     * <pre>
+     *price of newsletter
+     * </pre>
+     *
      * <code>int32 price = 3;</code>
      * @param value The price to set.
      * @return This builder for chaining.
@@ -758,6 +846,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     *price of newsletter
+     * </pre>
+     *
      * <code>int32 price = 3;</code>
      * @return This builder for chaining.
      */
@@ -770,6 +862,10 @@ private static final long serialVersionUID = 0L;
 
     private int validity_ ;
     /**
+     * <pre>
+     *validity of newsletter
+     * </pre>
+     *
      * <code>int32 validity = 4;</code>
      * @return The validity.
      */
@@ -778,6 +874,10 @@ private static final long serialVersionUID = 0L;
       return validity_;
     }
     /**
+     * <pre>
+     *validity of newsletter
+     * </pre>
+     *
      * <code>int32 validity = 4;</code>
      * @param value The validity to set.
      * @return This builder for chaining.
@@ -789,6 +889,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     *validity of newsletter
+     * </pre>
+     *
      * <code>int32 validity = 4;</code>
      * @return This builder for chaining.
      */
@@ -801,6 +905,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object genre_ = "";
     /**
+     * <pre>
+     *genre of newsletter
+     * </pre>
+     *
      * <code>string genre = 5;</code>
      * @return The genre.
      */
@@ -817,6 +925,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     *genre of newsletter
+     * </pre>
+     *
      * <code>string genre = 5;</code>
      * @return The bytes for genre.
      */
@@ -834,6 +946,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     *genre of newsletter
+     * </pre>
+     *
      * <code>string genre = 5;</code>
      * @param value The genre to set.
      * @return This builder for chaining.
@@ -849,6 +965,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     *genre of newsletter
+     * </pre>
+     *
      * <code>string genre = 5;</code>
      * @return This builder for chaining.
      */
@@ -859,6 +979,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     *genre of newsletter
+     * </pre>
+     *
      * <code>string genre = 5;</code>
      * @param value The bytes for genre to set.
      * @return This builder for chaining.

@@ -5,8 +5,8 @@ import com.subscription.subscriptionserver.entity.Newsletter;
 import com.subscription.subscriptionserver.entity.Subscription;
 import com.subscription.subscriptionserver.exceptions.ResourceException;
 import com.subscription.subscriptionserver.kafka.KafkaProducerConfig;
-import com.subscription.subscriptionserver.repository.NewsletterRepo;
 import com.subscription.subscriptionserver.repository.SubscriptionRepo;
+import com.subscription.subscriptionserver.service.NewsletterRepoService;
 import com.subscription.subscriptionserver.service.SubscriptionService;
 import com.subscription.subscriptionserver.util.GrpcUtils;
 import com.subscriptionserver.proto.CreateSubscriptionRequest;
@@ -45,7 +45,7 @@ public class SubscriptionServiceImpl implements SubscriptionService {
    * The Newsletter repo.
    */
   @Autowired
-  private NewsletterRepo newsletterRepo;
+  private NewsletterRepoService newsletterRepoService;
   @Autowired
   private KafkaProducerConfig kafkaProducer;
 
@@ -53,7 +53,7 @@ public class SubscriptionServiceImpl implements SubscriptionService {
   public com.subscriptionserver.proto.Subscription createSubscription(
       CreateSubscriptionRequest request) {
     final String username = getUsername();
-    final Newsletter newsletter = newsletterRepo
+    final Newsletter newsletter = newsletterRepoService
         .findById(request.getSubscription().getNewsletterId())
         .orElseThrow(() -> new ResourceException(ExceptionMessageConstants.NEWSLETTER_NOT_FOUND));
     if (subscriptionRepo.existsByUsernameAndNewsletter(username, newsletter)) {
@@ -65,7 +65,7 @@ public class SubscriptionServiceImpl implements SubscriptionService {
         .newsletter(newsletter)
         .build();
     newsletter.getSubscriptions().add(subscription);
-    newsletterRepo.save(newsletter);
+    newsletterRepoService.save(newsletter);
     subscriptionRepo.save(subscription);
     kafkaProducer.send(KafkaMessage.newBuilder().setContent(subscription.getId())
         .setReceiver(username).build());
@@ -103,7 +103,7 @@ public class SubscriptionServiceImpl implements SubscriptionService {
     }
     Newsletter newsletter = subscription.getNewsletter();
     newsletter.getSubscriptions().remove(subscription);
-    newsletterRepo.save(newsletter);
+    newsletterRepoService.save(newsletter);
     subscriptionRepo.delete(subscription);
     return DeleteSubscriptionResponse.newBuilder().build();
   }

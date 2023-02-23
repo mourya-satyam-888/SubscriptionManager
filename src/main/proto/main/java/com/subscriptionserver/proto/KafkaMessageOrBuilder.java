@@ -8,11 +8,19 @@ public interface KafkaMessageOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   *receiver mail
+   * </pre>
+   *
    * <code>string receiver = 1;</code>
    * @return The receiver.
    */
   java.lang.String getReceiver();
   /**
+   * <pre>
+   *receiver mail
+   * </pre>
+   *
    * <code>string receiver = 1;</code>
    * @return The bytes for receiver.
    */
@@ -20,11 +28,19 @@ public interface KafkaMessageOrBuilder extends
       getReceiverBytes();
 
   /**
+   * <pre>
+   *content of mail
+   * </pre>
+   *
    * <code>string content = 2;</code>
    * @return The content.
    */
   java.lang.String getContent();
   /**
+   * <pre>
+   *content of mail
+   * </pre>
+   *
    * <code>string content = 2;</code>
    * @return The bytes for content.
    */

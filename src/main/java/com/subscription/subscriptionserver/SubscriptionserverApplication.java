@@ -2,11 +2,13 @@ package com.subscription.subscriptionserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 
 /**
  * The type Subscriptionserver application.
  */
 @SpringBootApplication
+@EnableCaching
 public class SubscriptionserverApplication {
 
   /**

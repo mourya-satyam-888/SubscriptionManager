@@ -41,11 +41,12 @@ public final class Message {
       "\n\rmessage.proto\022\027com.subscriptionmanager" +
       "\"^\n\021NewsletterDetails\022\n\n\002id\030\001 \001(\t\022\r\n\005tit" +
       "le\030\002 \001(\t\022\r\n\005price\030\003 \001(\005\022\020\n\010validity\030\004 \001(" +
-      "\005\022\r\n\005genre\030\005 \001(\t\"X\n\014Subscription\022\n\n\002id\030\001" +
-      " \001(\t\022\024\n\014newsletterId\030\002 \001(\t\022\020\n\010username\030\003" +
-      " \001(\t\022\024\n\014validityDate\030\004 \001(\t\"1\n\014KafkaMessa" +
-      "ge\022\020\n\010receiver\030\001 \001(\t\022\017\n\007content\030\002 \001(\tB \n" +
-      "\034com.subscriptionserver.protoP\001b\006proto3"
+      "\005\022\r\n\005genre\030\005 \001(\t\"Z\n\014Subscription\022\n\n\002id\030\001" +
+      " \001(\t\022\025\n\rnewsletter_id\030\002 \001(\t\022\020\n\010username\030" +
+      "\003 \001(\t\022\025\n\rvalidity_date\030\004 \001(\t\"1\n\014KafkaMes" +
+      "sage\022\020\n\010receiver\030\001 \001(\t\022\017\n\007content\030\002 \001(\tB" +
+      " \n\034com.subscriptionserver.protoP\001b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -1,23 +1,40 @@
 syntax = "proto3";
+// (-- api-linter: core::0215::versioned-packages=disabled
+//     aip.dev/not-precedent: Versioning not needed --)
 package com.subscriptionmanager;
 option java_multiple_files = true;
 option  java_package = "com.subscriptionserver.proto";
 
+//Newsletter Details message
 message NewsletterDetails{
+  //id of newsletter
   string id = 1;
+  //title of newsletter
   string title = 2;
+  //price of newsletter
   int32 price = 3;
+  //validity of newsletter
   int32 validity = 4;
+  //genre of newsletter
   string genre = 5;
 }
+
+//Subscription Message
 message Subscription{
+  //id of subscription
   string id = 1;
-  string newsletterId = 2;
+  //newsletter id for which subscription is created
+  string newsletter_id = 2;
+  //username of subscriber
   string username = 3;
-  string validityDate = 4;
+  //validity of subscription
+  string validity_date = 4;
 }
+//Kafka Message
 message KafkaMessage{
+  //receiver mail
   string receiver = 1;
+  //content of mail
   string content = 2;
 
 }
